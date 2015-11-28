@@ -1,1 +1,11 @@
 ---
+- name: Install Packages | apt
+  apt:
+    state: latest
+    pkg: "{{ item }}"
+  with_items:
+    - owncloud
+  tags:
+    - owncloud
+    - software-installation
+    - using-apt
