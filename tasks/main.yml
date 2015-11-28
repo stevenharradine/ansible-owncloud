@@ -5,7 +5,7 @@
     pkg: "{{ item }}"
     update_cache: yes
   with_items:
-    - owncloud
+    - owncloud-client
   tags:
     - owncloud
     - software-installation
