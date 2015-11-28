@@ -1,6 +1,7 @@
 ---
 dependencies:
   - role: telusdigital.apt-repository
+    repository_key: "0xb9316a7bc7917b12"
     repository_url: "deb http://download.owncloud.org/download/repositories/stable/Ubuntu_14.04/ /"
 galaxy_info:
   author: "Steven Harradine"
