@@ -1,0 +1,15 @@
+---
+dependencies:
+  - role: telusdigital.apt-repository
+    repository_url: "deb http://download.owncloud.org/download/repositories/stable/Ubuntu_14.04/ /"
+galaxy_info:
+  author: "Steven Harradine"
+  categories:
+    - cloud
+  description: "Installs and configure owncloud"
+  license: ISC License
+  min_ansible_version: 1.2
+  platforms:
+    - name: Ubuntu
+      versions:
+        - all
