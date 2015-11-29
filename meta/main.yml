@@ -3,6 +3,7 @@ dependencies:
   - role: telusdigital.php
     php_modules:
       - php5-gd
+      - php5-curl
   - role: telusdigital.nginx
     nginx_php_enabled: yes
   - role: telusdigital.mariadb
