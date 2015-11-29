@@ -1,6 +1,12 @@
 ---
-- name: download and extract owncloud
+- name: download
+  get_url:
+    url: https://download.owncloud.org/community/owncloud-8.2.1.zip
+    dest: /tmp/owncloud-8.2.1.zip
+    mode: 0440
+
+- name: extract
   unarchive:
-    src: https://download.owncloud.org/community/owncloud-8.2.1.zip
+    src: /tmp/owncloud-8.2.1.zip
     dest: /data/www/docroot/
     copy: no
