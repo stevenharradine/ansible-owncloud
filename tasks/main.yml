@@ -4,6 +4,7 @@
     url: https://download.owncloud.org/community/owncloud-8.2.1.zip
     dest: /tmp/owncloud-8.2.1.zip
     mode: 0440
+    validate_certs: no
 
 - name: extract
   unarchive:
