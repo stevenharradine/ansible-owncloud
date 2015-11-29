@@ -2,6 +2,7 @@
 dependencies:
   - role: telusdigital.nginx
   - role: telusdigital.mariadb
+    mariadb_server: true
 galaxy_info:
   author: "Steven Harradine"
   categories:
