@@ -1,1 +1,6 @@
 ---
+- name: download and extract owncloud
+  unarchive:
+    src: https://download.owncloud.org/community/owncloud-8.2.1.zip
+    dest: /data/www/docroot/
+    copy: no
