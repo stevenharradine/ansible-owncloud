@@ -6,10 +6,8 @@ dependencies:
       - php5-curl
       - php5-mysql
   - role: telusdigital.nginx
-    nginx_runtime_root: /var/run/
     nginx_php_enabled: yes
   - role: telusdigital.mariadb
-    mariadb_runtime_root: /var/run/
     mariadb_server: true
     database_password: secure_password
 galaxy_info:
