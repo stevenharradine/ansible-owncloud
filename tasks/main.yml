@@ -1,13 +1,8 @@
 ---
-- name: download
+- name: download | Owncloud
   get_url:
     url: https://download.owncloud.org/community/owncloud-8.2.1.tar.bz2
     dest: /tmp/owncloud-8.2.1.tar.bz2
     mode: 0440
     validate_certs: no
-
-- name: extract
-  unarchive:
-    src: /tmp/owncloud-8.2.1.tar.bz2
-    dest: /data/www/docroot/
-    copy: no
+  notify: extract | Owncloud
