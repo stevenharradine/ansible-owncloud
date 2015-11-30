@@ -2,6 +2,7 @@
 dependencies:
   - role: telusdigital.php
     php_fpm_pidfile_path: /tmp/php.pid
+    log_root: /tmp
     php_modules:
       - php5-gd
       - php5-curl
