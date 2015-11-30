@@ -1,2 +1,3 @@
 ---
 owncloud_version: 8.2.1
+owncloud_external_ip: 127.0.0.1
