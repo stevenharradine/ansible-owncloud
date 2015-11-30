@@ -1,7 +1,7 @@
 ---
 dependencies:
   - role: telusdigital.php
-    php_fpm_pidfile_path: /var/run/nginx.pid
+    php_fpm_pidfile_path: /var/run/php.pid
     php_modules:
       - php5-gd
       - php5-curl
