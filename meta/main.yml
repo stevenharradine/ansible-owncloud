@@ -1,6 +1,6 @@
 ---
 dependencies:
-  - role: telusdigital.php
+  - role: stevenharradine.php
     php_modules:
       - php5-gd
       - php5-curl
