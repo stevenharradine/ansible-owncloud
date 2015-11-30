@@ -1,13 +1,13 @@
 ---
 dependencies:
   - role: telusdigital.php
-    php_fpm_pidfile_path: /var/run/php.pid
+    php_fpm_pidfile_path: /tmp/php.pid
     php_modules:
       - php5-gd
       - php5-curl
       - php5-mysql
   - role: telusdigital.nginx
-    nginx_pidfile_path: /var/run/nginx.pid
+    nginx_pidfile_path: /tmp/nginx.pid
     nginx_php_enabled: yes
   - role: telusdigital.mariadb
     mariadb_pidfile_path: /tmp/mysql.pid
