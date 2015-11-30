@@ -4,3 +4,5 @@
     src: "/tmp/owncloud-{{ owncloud_version }}.tar.bz2"
     dest: /data/www/docroot/
     copy: no
+    owner: www-data
+    group: www-data
