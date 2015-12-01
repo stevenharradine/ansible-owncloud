@@ -6,7 +6,7 @@ $CONFIG = array (
   'trusted_domains' => 
   array (
     0 => 'localhost',
-    1 => 'owncloud_external_ip',
+    1 => '{{ owncloud_external_ip }}',
   ),
   'datadirectory' => '/data/www/docroot/owncloud/data',
   'overwrite.cli.url' => 'http://localhost',
