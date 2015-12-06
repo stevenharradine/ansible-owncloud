@@ -1,6 +1,6 @@
 <?php
 $CONFIG = array (
-  'instanceid' => '{{ owncloud_instanceid }}',
+  'instanceid' => '{{ owncloud_instanceid.stdout }}',
   'passwordsalt' => 'RNTrvCh2gJ3ds0Vc+ixx/HbLq9g8dw',
   'secret' => 'Pre3Pq82QsOVWfdMxCgx7PuGXpDkNBicKrzP7iYqKc5D43eZ',
   'trusted_domains' => 

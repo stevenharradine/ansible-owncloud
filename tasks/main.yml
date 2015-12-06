@@ -19,7 +19,7 @@
 
 - name: get id | Owncloud
   shell: "sudo cat /data/www/docroot/owncloud/config/config.php | grep instanceid | awk -F \\' '{ print $4 }'"
-  register: owncloud_instanceid.stdout
+  register: owncloud_instanceid
 
 - name: overwrite configuration | Owncloud
   template:
