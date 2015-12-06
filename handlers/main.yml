@@ -6,3 +6,12 @@
     copy: no
     owner: www-data
     group: www-data
+  notify: copy configuration | Owncloud
+
+- name: copy configuration | Owncloud
+  template:
+    src: owncloud/config/config.php
+    dest: /data/www/docroot/owncloud/config/config.php
+    owner: www-data
+    group: www-data
+    mode: 0640
