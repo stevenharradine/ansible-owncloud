@@ -1,8 +1,8 @@
 ---
 - name: download | Owncloud
   get_url:
-    url: "https://download.owncloud.com/desktop/stable/owncloudclient-1.8.4.tar.xz"
-    dest: "/tmp/owncloud.tar.xz"
+    url: "https://download.owncloud.org/community/owncloud-8.1.4.tar.bz2"
+    dest: "/tmp/owncloud.tar.bz2"
     mode: 0440
     validate_certs: no
   notify: extract | Owncloud

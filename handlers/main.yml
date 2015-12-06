@@ -1,7 +1,7 @@
 ---
 - name: extract | Owncloud
   unarchive:
-    src: "/tmp/owncloud.tar.xz"
+    src: "/tmp/owncloud.tar.bz2"
     dest: /data/www/docroot/
     copy: no
     owner: www-data
