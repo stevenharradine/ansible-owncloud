@@ -18,5 +18,5 @@ $CONFIG = array (
   'dbuser' => '{{ project }}',
   'dbpassword' => 'secure_password',
   'logtimezone' => 'UTC',
-  'installed' => {% 'true' if owncloud_installed.stdout == 'true' else 'false' %},
+  'installed' => {% 'true' if owncloud_installed.stdout == true else 'false' %},
 );
