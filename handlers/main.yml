@@ -6,7 +6,7 @@
     copy: no
     owner: www-data
     group: www-data
-#  notify: copy configuration | Owncloud
+  notify: copy configuration | Owncloud
 
 - name: copy configuration | Owncloud
   lineinfile:
