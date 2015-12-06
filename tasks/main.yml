@@ -5,4 +5,26 @@
     dest: "/tmp/owncloud.tar.bz2"
     mode: 0440
     validate_certs: no
-  notify: extract | Owncloud
+
+- name: extract | Owncloud
+  unarchive:
+    src: "/tmp/owncloud.tar.bz2"
+    dest: /data/www/docroot/
+    copy: no
+    owner: www-data
+    group: www-data
+
+- name: generate configuration | Owncloud
+  command: curl localhost/owncloud/index.php
+
+- name: get id | Owncloud
+  shell: "sudo cat /data/www/docroot/owncloud/config/config.php | grep instanceid | awk -F \' '{ print $4 }'"
+  register: owncloud_instanceid
+
+- name: overwrite configuration | Owncloud
+  template:
+    src: owncloud/config/config.php
+    dest: /data/www/docroot/owncloud/config/config.php
+    owner: www-data
+    group: www-data
+    mode: 0640
