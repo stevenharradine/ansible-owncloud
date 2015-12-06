@@ -8,7 +8,7 @@ $CONFIG = array (
     0 => 'localhost',
     1 => '{{ owncloud_external_ip }}',
   ),
-  'datadirectory' => '/data/www/docroot/owncloud/data',
+  'datadirectory' => '{{ owncloud_datadirectory }}',
   'overwrite.cli.url' => 'http://localhost',
   'dbtype' => 'mysql',
   'version' => '8.2.1.4',
