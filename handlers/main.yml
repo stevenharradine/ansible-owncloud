@@ -6,6 +6,10 @@
     copy: no
     owner: www-data
     group: www-data
+  notify: generate configuration | Owncloud
+
+- name: generate configuration | Owncloud
+  command: curl localhost/owncloud/index.php
   notify: copy configuration | Owncloud
 
 - name: copy configuration | Owncloud
