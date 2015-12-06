@@ -22,7 +22,7 @@
   register: owncloud_instanceid
 
 - name: get installed | Owncloud
-  shell: "sudo cat /data/www/docroot/owncloud/config/config.php | grep installed | awk -F \\=\\> '{ print $2 }' | awk -F , '{ print $1 }'"
+  shell: "if [ `sudo cat /data/www/docroot/owncloud/config/config.php | grep installed | wc -l` -eq 1 ]; then sudo cat /data/www/docroot/owncloud/config/config.php | grep installed | awk -F \\=\\> '{ print $2 }' | awk -F , '{ print $1 }'; else echo false; fi"
   register: owncloud_installed
 
 - name: overwrite configuration | Owncloud
