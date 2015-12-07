@@ -37,3 +37,4 @@
   shell: "cd /data/www/docroot/owncloud && sudo -u www-data OC_PASS='{{ item.password }}' php occ user:add --password-from-env {{ item.user }}"
   with_items: owncloud_users
   when: owncloud_users is defined
+  ignore_errors: yes
