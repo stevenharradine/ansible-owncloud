@@ -2,12 +2,10 @@
 - name: get id | Owncloud
   shell: "sudo cat /data/www/docroot/owncloud/config/config.php | grep instanceid | awk -F \\' '{ print $4 }'"
   register: owncloud_instanceid
-  when: owncloud_instanceid is not defined
 
 - name: get installed | Owncloud
   shell: "if [ `sudo cat /data/www/docroot/owncloud/config/config.php | grep installed | wc -l` -eq 1 ]; then sudo cat /data/www/docroot/owncloud/config/config.php | grep installed | awk -F \\=\\> '{ print $2 }' | awk -F , '{ print $1 }'; else echo false; fi"
   register: owncloud_installed
-  when: owncloud_installed is not defined
 
 - name: overwrite configuration | Owncloud
   template:
