@@ -28,7 +28,7 @@
 - include: overwrite_configuration.yml
 
 - name: setup admin user | Owncloud
-  shell: cd /data/www/docroot/owncloud/ && sudo -u www-data php occ  maintenance:install --database "mysql" --database-name "owncloud"  --database-user "root" --database-pass "password" --admin-user "admin" --admin-pass "password"
+  shell: "cd /data/www/docroot/owncloud/ && sudo -u www-data php occ  maintenance:install --database {{ owncloud_database_type }} --database-name '{{ project }}'  --database-user '{{ project }}' --database-pass '{{ owncloud_database_password }}' --admin-user '{{ owncloud_admin_user }}' --admin-pass {{ owncloud_admin_password }}"
   ignore_errors: yes
 
 - include: overwrite_configuration.yml

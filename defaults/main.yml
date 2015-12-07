@@ -2,3 +2,8 @@
 owncloud_version: 8.2.1
 owncloud_external_ip: 127.0.0.1
 owncloud_datadirectory: /data/www/docroot/owncloud/data
+
+owncloud_database_type: mysql
+owncloud_database_password: secure_password
+owncloud_admin_user: douglas
+owncloud_admin_password: password
