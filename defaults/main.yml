@@ -7,3 +7,6 @@ owncloud_database_type: mysql
 owncloud_database_password: secure_password
 owncloud_admin_user: douglas
 owncloud_admin_password: password
+
+owncloud_passwordsalt: RNTrvCh2gJ3ds0Vc+ixx/HbLq9g8dw
+owncloud_secret: Pre3Pq82QsOVWfdMxCgx7PuGXpDkNBicKrzP7iYqKc5D43eZ
