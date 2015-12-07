@@ -32,3 +32,15 @@
     owner: www-data
     group: www-data
     mode: 0640
+
+- name: setup admin user | Owncloud
+  shell: sudo -u www-data php occ  maintenance:install --database "mysql" --database-name "owncloud"  --database-user "root" --database-pass "password" --admin-user "admin" --admin-pass "password"
+  register: owncloud_installed
+
+- name: overwrite configuration | Owncloud
+  template:
+    src: owncloud/config/config.php
+    dest: /data/www/docroot/owncloud/config/config.php
+    owner: www-data
+    group: www-data
+    mode: 0640
