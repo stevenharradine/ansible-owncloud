@@ -21,14 +21,10 @@
   shell: "sudo cat /data/www/docroot/owncloud/config/config.php | grep instanceid | awk -F \\' '{ print $4 }'"
   register: owncloud_instanceid
 
-- name: get installed | Owncloud
-  shell: "if [ `sudo cat /data/www/docroot/owncloud/config/config.php | grep installed | wc -l` -eq 1 ]; then sudo cat /data/www/docroot/owncloud/config/config.php | grep installed | awk -F \\=\\> '{ print $2 }' | awk -F , '{ print $1 }'; else echo false; fi"
-  register: owncloud_installed
-
 - include: overwrite_configuration.yml
 
 - name: setup admin user | Owncloud
-  shell: "cd /data/www/docroot/owncloud/ && sudo -u www-data php occ  maintenance:install --database {{ owncloud_database_type }} --database-name '{{ project }}'  --database-user '{{ project }}' --database-pass '{{ owncloud_database_password }}' --admin-user '{{ owncloud_admin_user }}' --admin-pass {{ owncloud_admin_password }}"
+  shell: "cd /data/www/docroot/owncloud/ && sudo -u www-data php occ  maintenance:install --database '{{ owncloud_database_type }}' --database-name '{{ project }}'  --database-user '{{ project }}' --database-pass '{{ owncloud_database_password }}' --admin-user '{{ owncloud_admin_user }}' --admin-pass {{ owncloud_admin_password }}"
   ignore_errors: yes
 
 - include: overwrite_configuration.yml
