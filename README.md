@@ -5,7 +5,6 @@
 [![Licence](https://img.shields.io/badge/Licence-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 [![Platforms](http://img.shields.io/badge/platforms-ubuntu-lightgrey.svg)](#)
 [![Role](https://img.shields.io/ansible/role/6269.svg)](https://galaxy.ansible.com/detail#/role/6269)
-[![Codacy Badge](https://api.codacy.com/project/badge/grade/d64db7a1ce8145799769f675afa7439d)](https://www.codacy.com/app/stevenharradine/ansible-owncloud)
 
 Tunables
 --------
