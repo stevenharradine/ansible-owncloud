@@ -32,3 +32,8 @@
   ignore_errors: yes
 
 - include: overwrite_configuration.yml
+
+- name: add regular users | Owncloud
+  shell: "cd /data/www/docroot/owncloud && sudo -u www-data OC_PASS='{{ item.password }}' php occ user:add --password-from-env {{ item.user }}"
+  with_items: owncloud_users
+  when: owncloud_users is defined
