@@ -35,7 +35,7 @@
 
 - name: setup admin user | Owncloud
   shell: cd /data/www/docroot/owncloud/ && sudo -u www-data php occ  maintenance:install --database "mysql" --database-name "owncloud"  --database-user "root" --database-pass "password" --admin-user "admin" --admin-pass "password"
-  register: owncloud_installed
+  ignore_errors: yes
 
 - name: overwrite configuration | Owncloud
   template:
