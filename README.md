@@ -4,7 +4,7 @@
 
 [![Licence](https://img.shields.io/badge/Licence-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 [![Role](https://img.shields.io/ansible/role/6269.svg)](https://galaxy.ansible.com/detail#/role/6269)
-![Platforms](http://img.shields.io/badge/platforms-ubuntu-lightgrey.svg)
+[![Platforms](http://img.shields.io/badge/platforms-ubuntu-lightgrey.svg)](#)
 
 Tunables
 --------
