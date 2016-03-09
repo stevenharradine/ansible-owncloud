@@ -1,5 +1,5 @@
 ---
-owncloud_version: 8.2.1
+owncloud_version: 9.0.0
 owncloud_external_ip: 127.0.0.1
 owncloud_datadirectory: /data/www/docroot/owncloud/data
 
